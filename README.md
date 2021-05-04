@@ -4,4 +4,8 @@ I frequently use Docker Compose and I've recently started creating compose files
 
 > “Everything should be made as simple as possible, but no simpler.” Albert Einstein
 
-I use zsh, so I have this file aliased in my `.zshrc`.
+I use zsh, so I have this file sourced in my `.zshrc`:
+
+```
+source ~/Projects/docker-alias/aliases
+```
