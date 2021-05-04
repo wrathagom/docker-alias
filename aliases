@@ -1,3 +1,6 @@
+# Run Docker stats
+alias ds="docker stats"
+
 # When you first cd into a directory you can up, detach, and attach to logs with three keystrokes.
 alias dcul="docker-compose up -d && docker-compose logs -f"
 
