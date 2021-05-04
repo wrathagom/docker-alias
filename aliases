@@ -1,6 +1,8 @@
+# Docker Aliases
 # Run Docker stats
 alias ds="docker stats"
 
+# Docker Compose Aliases, most of my work is here, so there are more!
 # When you first cd into a directory you can up, detach, and attach to logs with three keystrokes.
 alias dcul="docker-compose up -d && docker-compose logs -f"
 
@@ -13,5 +15,18 @@ alias dcrl="docker-compose down && docker-compose up -d && docker-compose logs -
 # Attach to the logs of the current directories compose
 alias dcl="docker-compose logs -f"
 
+# List containers from current compose
+alias dcp="docker-compose ps"
+
+# Build a specific service or everything
+dcb() { docker-compose build $1; }
+
 # Run a Bash shell in the selected service
-dcb() {docker-compose exec $1 /bin/bash; }
+dce() {
+  if [ "$2" != "" ]
+  then
+    docker-compose exec $1 $2
+  else
+    docker-compose exec $1 /bin/bash
+  fi
+}
