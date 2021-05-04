@@ -1,0 +1,14 @@
+# When you first cd into a directory you can up, detach, and attach to logs with three keystrokes.
+alias dcul="docker-compose up -d && docker-compose logs -f"
+
+# Restart the currently running compose with a down and up
+alias dcr="docker-compose down && docker-compose up -d"
+
+# Restart the currently running compose and attach to logs
+alias dcrl="docker-compose down && docker-compose up -d && docker-compose logs -f"
+
+# Attach to the logs of the current directories compose
+alias dcl="docker-compose logs -f"
+
+# Run a Bash shell in the selected service
+dcb() {docker-compose exec $1 /bin/bash; }
