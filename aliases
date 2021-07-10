@@ -15,6 +15,9 @@ alias dcrl="docker-compose down && docker-compose up -d && docker-compose logs -
 # Attach to the logs of the current directories compose
 alias dcl="docker-compose logs -f"
 
+# Down the current compose
+alias dcd="docker-compose down"
+
 # List containers from current compose
 alias dcp="docker-compose ps"
 
